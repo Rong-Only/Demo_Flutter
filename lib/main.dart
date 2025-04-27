@@ -2,6 +2,7 @@
 import 'package:demo_interview/card.dart';
 import 'package:demo_interview/favorite.dart';
 import 'package:demo_interview/home.dart';
+import 'package:demo_interview/login.dart';
 import 'package:demo_interview/menu.dart';
 import 'package:demo_interview/store.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: Login_page(),
     );
   }
 }
