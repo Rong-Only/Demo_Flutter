@@ -188,7 +188,40 @@ class _Login_pageState extends State<Login_page> {
                             size: 20,
                           )
                         ],
-                      ))
+                      )),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    children: [
+                      Text("Login with an account!"),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'icons/facebook.png',
+                                height: 45,
+                                width: 45,
+                              )),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                'icons/communication.png',
+                                height: 45,
+                                width: 45,
+                              ))
+                        ],
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
