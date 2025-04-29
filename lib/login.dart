@@ -3,6 +3,7 @@
 import 'dart:io';
 
 import 'package:demo_interview/main.dart';
+import 'package:demo_interview/singup.dart';
 import 'package:flutter/material.dart';
 
 class Login_page extends StatefulWidget {
@@ -37,7 +38,7 @@ class _Login_pageState extends State<Login_page> {
         backgroundColor: const Color.fromARGB(255, 227, 207, 54),
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Form(
               key: _formkey,
               child: Column(
@@ -66,7 +67,7 @@ class _Login_pageState extends State<Login_page> {
                           border: InputBorder.none, // Removes default border
                           enabledBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
-                          prefixIcon: Icon(Icons.person),
+                          prefixIcon: Icon(Icons.person_rounded),
                           suffixIcon: IconButton(
                               onPressed: () {}, icon: Icon(Icons.check_circle)),
                           contentPadding:
@@ -98,7 +99,7 @@ class _Login_pageState extends State<Login_page> {
                           border: InputBorder.none, // Removes default border
                           enabledBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
-                          prefixIcon: Icon(Icons.password),
+                          prefixIcon: Icon(Icons.lock_open_outlined),
                           suffixIcon: IconButton(
                               onPressed: () {
                                 setState(() {
@@ -142,7 +143,7 @@ class _Login_pageState extends State<Login_page> {
                     ],
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 30,
                   ),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -194,11 +195,26 @@ class _Login_pageState extends State<Login_page> {
                   SizedBox(
                     height: 10,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("You have't account yet !"),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Singup_page(),
+                                ));
+                          },
+                          child: Text("Singup")),
+                    ],
+                  ),
                   Column(
                     children: [
                       Text("Login with an account!"),
                       SizedBox(
-                        height: 30,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -211,7 +227,7 @@ class _Login_pageState extends State<Login_page> {
                                 width: 45,
                               )),
                           SizedBox(
-                            width: 10,
+                            width: 5,
                           ),
                           IconButton(
                               onPressed: () {},
